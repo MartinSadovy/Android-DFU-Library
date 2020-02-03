@@ -878,6 +878,8 @@ public abstract class DfuBaseService extends IntentService implements DfuProgres
 	private final BluetoothGattCallback mGattCallback = new BluetoothGattCallback() {
 		@Override
 		public void onConnectionStateChange(final BluetoothGatt gatt, final int status, final int newState) {
+			waitFor(3000);
+
 			// Check whether an error occurred
 			if (status == BluetoothGatt.GATT_SUCCESS) {
 				if (newState == BluetoothGatt.STATE_CONNECTED) {
