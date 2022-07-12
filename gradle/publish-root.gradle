@@ -8,7 +8,7 @@ if (secretPropsFile.exists()) {
 }
 
 // Set up Sonatype repository
-
+/*
 nexusPublishing {
 
     repositories {
@@ -20,3 +20,4 @@ nexusPublishing {
     }
 
 }
+ */
